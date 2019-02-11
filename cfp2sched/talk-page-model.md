@@ -7,17 +7,21 @@ published: true
 summary: ###SUMMARY###
 lang: en
 ---
+<< [back to schedule](/schedule/)
 
-# ###TITLE###
-
+## ###TITLE###
 ---
+
 
 _###CONTENT###_
 
 ---
-## Speakers
-![###SPEAKERS###](###IMAGE###)
+### Speaker(s)
+###IMAGE###
+
 **###SPEAKERS###**
 
-## Bio
+### Bio
 ###BIO###
+
+<< [back to schedule](/schedule/)

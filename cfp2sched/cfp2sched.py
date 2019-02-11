@@ -67,19 +67,24 @@ for talk_details in data:
         file_name_extension = s[-1]
         
         potential_image_path = 'hotcrp-paper' + str(talk_details['pid']) + '-picture-upload.' + file_name_extension.lower()
-
+        print('> ' + potential_image_path)
         if os.path.exists("./" + potential_image_path):
-            image = 'img/speakers/' + potential_image_path
+            image = '/img/speakers/' + potential_image_path
+            image = '![](' + image +')'
+            print('  > ' + image)
         else:
-            image = "/img/speakers/neutral.png"
+            image = ""
     except:
-        image = "/img/speakers/neutral.png"
+        image = ""
 
+    summary = talk_details['abstract'][:97]
+    summary = summary.replace('\r','') + "..."  
+    summary = summary.replace('\n', '')
 
     # replace place holders in the model file by the values found in talk details
     filedata = filedata.replace('###TALKID###', str(talk_details['pid']))
-    filedata = filedata.replace('###TITLE###', talk_details['title'])
-    filedata = filedata.replace('###SUMMARY###', talk_details['abstract'][:97] + "...")
+    filedata = filedata.replace('###TITLE###', talk_details['title'].replace(':',', '))
+    filedata = filedata.replace('###SUMMARY###', summary)
     filedata = filedata.replace('###CONTENT###', talk_details['abstract'])
     filedata = filedata.replace('###SPEAKERS###', speakers)  
     filedata = filedata.replace('###IMAGE###', image)
@@ -100,4 +105,3 @@ with open('schedule.md', 'w+') as outputschedule:
 outputschedule.close()
 
 print "Finished conversion successfully!"
-
