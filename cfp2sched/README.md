@@ -17,7 +17,7 @@ HotCRP export :
 ## Output:
   - the schedule will be written to the file: `schedule.md`
   - the individual md files for each talk will be written to: `talks/pid` (pid is unique id given by HotCRP, the URL of each talk is set to `/talks/pid`)
-  - links to photos are set to: `/img/speakers/hotcrp-paperXX-picture-upload.[jpg|png]` where `XX` is the pid of the talk. If no photo given during CFP, the photo used is `neutral.png`.
+  - links to photos are set to: `/img/speakers/hotcrp-paperXX-picture-upload.[jpg|png]` where `XX` is the pid of the talk. If no photo given during CFP, no photo is displayed.
 
 ## Author(s)
 - Christophe Brocas (@cbrocas)
