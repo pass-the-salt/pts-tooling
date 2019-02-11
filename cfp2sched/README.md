@@ -2,7 +2,7 @@
 
 Generate schedule table markdown file + individual markdown talk files from HotCRP "JSON export + attachments" feature.
 
-##Prerequesites:##
+## Prerequesites
 
 HotCRP export : 
   - go to `https[:]//path/to/HotCRP/search?t=all&q=`
