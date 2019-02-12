@@ -12,11 +12,7 @@ lang: en
 
 ---
 
-<style>
-table {border-collapse: collapse;}
-table, th, td {border: 1px solid black; padding: 5px;}
-</style>
-
+{:.schedule}
 | **Time** | **Talks** | **Speaker(s)** |
 | :---:  | :---   | :---:         |
 ###CONTENT###
