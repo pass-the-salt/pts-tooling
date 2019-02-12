@@ -12,6 +12,11 @@ lang: en
 
 ---
 
-| `Time` | `Talk` | `Speaker(s)` |
-| :---:  | :---   | :---         |
+<style>
+table {border-collapse: collapse;}
+table, th, td {border: 1px solid black; padding: 5px;}
+</style>
+
+| **Time** | **Talks** | **Speaker(s)** |
+| :---:  | :---   | :---:         |
 ###CONTENT###
