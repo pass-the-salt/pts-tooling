@@ -13,13 +13,13 @@ lang: en
 ---
 
 
-_###CONTENT###_
+###CONTENT###
 
 ---
 ### Speaker(s)
 ###IMAGE###
 
-**###SPEAKERS###**
+###SPEAKERS###
 
 ### Bio
 ###BIO###

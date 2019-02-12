@@ -66,7 +66,7 @@ for talk_details in data:
 
     # if a bio has been provided by the authors, use it
     try:
-        bio = talk_details['options']['bio']
+        bio = talk_details['options']['bio'].replace('\r','')
     except KeyError:
         bio = ""
 
@@ -85,16 +85,17 @@ for talk_details in data:
     except KeyError:
         image = ""
 
+    talk_details['abstract'] = talk_details['abstract'].replace('\r','')
     summary = talk_details['abstract'][:97]
-    summary = summary.replace('\r','') + "..."
-    summary = summary.replace('\n', '')
+    summary = summary.replace('\n', '; ')
+    summary += "…"
 
     # replace place holders in the model file by the values found in talk details
     filedata = filedata.replace('###TALKID###', str(talk_details['pid']))
     filedata = filedata.replace('###TITLE###', talk_details['title'].replace(':',', '))
     filedata = filedata.replace('###SUMMARY###', summary)
     filedata = filedata.replace('###CONTENT###', talk_details['abstract'])
-    filedata = filedata.replace('###SPEAKERS###', speakers)  
+    filedata = filedata.replace('###SPEAKERS###', "**{}**".format(speakers))
     filedata = filedata.replace('###IMAGE###', image)
     filedata = filedata.replace('###BIO###', bio)
 
