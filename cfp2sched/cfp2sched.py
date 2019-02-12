@@ -62,7 +62,6 @@ for talk_details in data:
         speakers += "{} {}".format(author['first'], author['last'])
         if author['affiliation'] != 'None':
             speakers += " ({})".format(author['affiliation'])
-    speakers += "."
 
     # if a bio has been provided by the authors, use it
     try:
