@@ -7,6 +7,7 @@
 
 import sys
 import os
+import shutil
 import json
 
 MODELSDIR='models'
@@ -15,7 +16,8 @@ MODELTALK='talk-page-model.md'
 INDIR='input'
 INJSON='hotcrp-data.json'
 OUTDIR='output'
-OUTTALKS='talks'
+OUTTALKS=os.path.join('pages', 'talks')
+OUTIMGS=os.path.join('img', 'speakers')
 
 if not os.path.isfile(os.path.join(INDIR, INJSON)):
     print("Could not find {}".format(os.path.join(INDIR, INJSON)))
@@ -32,7 +34,9 @@ data = json.loads(jsonstr)
 if not os.path.isdir(OUTDIR):
     os.mkdir(OUTDIR)
 if not os.path.isdir(os.path.join(OUTDIR, OUTTALKS)):
-    os.mkdir(os.path.join(OUTDIR, OUTTALKS))  
+    os.makedirs(os.path.join(OUTDIR, OUTTALKS))
+if not os.path.isdir(os.path.join(OUTDIR, OUTIMGS)):
+    os.makedirs(os.path.join(OUTDIR, OUTIMGS))
 
 # the schedule
 with open(os.path.join(MODELSDIR, MODELLIST), 'r') as talkslistmodel :
@@ -74,6 +78,7 @@ for talk_details in data:
         if os.path.exists(os.path.join(INDIR, potential_image_file)):
             image = '![](/img/speakers/{})'.format(potential_image_file)
             print('  > ' + image)
+            shutil.copyfile(os.path.join(INDIR, potential_image_file), os.path.join(OUTDIR, OUTIMGS, potential_image_file))
         else:
             image = ""
     except KeyError:

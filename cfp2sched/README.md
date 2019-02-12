@@ -22,9 +22,7 @@ HotCRP export :
     - the links to photos are set to: `/img/speakers/hotcrp-paperXX-picture-upload.[jpg|png]` where `XX` is the pid of the talk. If no photo given during CFP, no photo is displayed.
 
 ## Inject results into Jekyll website
-- copy `"output"\schedule.md` file to `<Jekyll root directory>`
-- copy `"output"\talks` directory to `<Jekyll root directory>/pages` (create it if not already done)
-- copy `"intput"\hotcrp-paperXX-picture-upload.[jpg|png]` to `<Jekyll root directory>/img/speakers/`
+- copy `output` content to `<Jekyll root directory>`
 
 Website regeneration: `$ jekyll serve`
 
