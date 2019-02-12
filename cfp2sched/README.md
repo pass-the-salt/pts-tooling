@@ -8,14 +8,14 @@ HotCRP export :
   - go to `https[:]//path/to/HotCRP/search?t=all&q=`
   - select all wanted talks 
   - download them selecting the `Paper information > JSON with attachments` 
-  - export the `hotcrp-data.json` file and the optional photos (`hotcrp-paperXX-picture-upload.[jpg|png]`) **in the same directory that** `cfp2sched.py`.
+  - export the `hotcrp-data.json` file and the optional photos (`hotcrp-paperXX-picture-upload.[jpg|png]`) **in an "input" directory below** `cfp2sched.py`.
 
 ## Run the script
 
-`$ python cfp2sched.py hotcrp-data.json`
+`$ python3 cfp2sched.py`
 
 ## Output:
-`cfp2sched.py` generates the following files:
+`cfp2sched.py` generates the following files in an "output" directory:
   - `schedule.md`: the schedule
   - `talks\pid.md`: the individual md files for each talk where pid is the unique id given by HotCRP. 
     - the URL of each talk is set to `/talks/pid`.
