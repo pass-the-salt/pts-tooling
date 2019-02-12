@@ -17,7 +17,7 @@ HotCRP export :
 ## Output:
 `cfp2sched.py` generates the following files:
   - `schedule.md`: the schedule
-  - `talks\pid.md\ : the individual md files for each talk where pid is the unique id given by HotCRP. 
+  - `talks\pid.md`: the individual md files for each talk where pid is the unique id given by HotCRP. 
     - the URL of each talk is set to `/talks/pid`.
     - the links to photos are set to: `/img/speakers/hotcrp-paperXX-picture-upload.[jpg|png]` where `XX` is the pid of the talk. If no photo given during CFP, no photo is displayed.
 
