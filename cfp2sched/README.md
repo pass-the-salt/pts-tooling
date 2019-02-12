@@ -15,16 +15,18 @@ HotCRP export :
 `$ python cfp2sched.py hotcrp-data.json`
 
 ## Output:
-  - the schedule will be written to the file: `schedule.md`
-  - the individual md files for each talk will be written to: `talks/pid` (pid is unique id given by HotCRP, the URL of each talk is set to `/talks/pid`)
-  - links to photos are set to: `/img/speakers/hotcrp-paperXX-picture-upload.[jpg|png]` where `XX` is the pid of the talk. If no photo given during CFP, no photo is displayed.
+`cfp2sched.py` generates the following files:
+  - `schedule.md`: the schedule
+  - `talks\pid.md\ : the individual md files for each talk where pid is the unique id given by HotCRP. 
+    - the URL of each talk is set to `/talks/pid`.
+    - the links to photos are set to: `/img/speakers/hotcrp-paperXX-picture-upload.[jpg|png]` where `XX` is the pid of the talk. If no photo given during CFP, no photo is displayed.
 
 ## Inject results into Jekyll website
 - copy `schedule.md` to `<Jekyll root directory>`
 - copy `talks` directory to `<Jekyll root directory>/pages` (create it if not already done)
 - copy `hotcrp-paperXX-picture-upload.[jpg|png]` to `<Jekyll root directory>/img/speakers/`
 
-And then : `$ jekyll serve`
+Website regeneration: `$ jekyll serve`
 
 ## Author(s)
 - Christophe Brocas (@cbrocas)
