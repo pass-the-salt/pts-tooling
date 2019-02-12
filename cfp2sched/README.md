@@ -29,7 +29,7 @@ HotCRP export :
 Website regeneration: `$ jekyll serve`
 
 ## Author(s)
-- Christophe Brocas (@cbrocas)
+- @cbrocas / @doegox
 
 ## License
 GNU GENERAL PUBLIC LICENSE (GPL) Version 3
