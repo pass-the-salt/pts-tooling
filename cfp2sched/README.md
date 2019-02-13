@@ -1,5 +1,7 @@
 # cfp2sched
 
+**CURRENT STATUS / disclamer:** draft quality code, may not be used as-is in production. Published on the "release soon & often" mode, because it can be useful to other HotCRP users.
+
 Generate schedule table markdown file + individual markdown talk files from HotCRP `JSON export + attachments` feature.
 
 ## Prerequesites
