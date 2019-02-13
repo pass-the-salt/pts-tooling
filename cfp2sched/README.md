@@ -26,6 +26,25 @@ HotCRP export :
 
 Website regeneration: `$ jekyll serve`
 
+## Style tuning
+
+The schedule table is tagged with a class `.schedule` so you can easily apply some CSS selectively on it.
+Similarly, the speakers pictures can be recognized by their `alt=speaker`.
+
+CSS examples:
+
+```css
+img[alt=speaker] {
+    width: 33%;
+}
+table.schedule {
+    border-collapse: collapse;
+}
+table.schedule th, table.schedule td {
+    border: 1px solid black; padding: 5px;
+}
+```
+
 ## Author(s)
 - @cbrocas / @doegox
 
