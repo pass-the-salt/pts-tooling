@@ -76,8 +76,8 @@ for talk_details in data:
         potential_image_file = 'hotcrp-paper{}-picture-upload{}'.format(talk_details['pid'], file_name_extension)
 
         if os.path.exists(os.path.join(INDIR, potential_image_file)):
-            image = '![speaker]({}{})'.format(OUTIMGS,potential_image_file)
-            imageheader = '{}{}'.format(OUTIMGS,potential_image_file)
+            image = '![speaker](/{}/{})'.format(OUTIMGS,potential_image_file)
+            imageheader = '/{}/{}'.format(OUTIMGS,potential_image_file)
             shutil.copyfile(os.path.join(INDIR, potential_image_file), os.path.join(OUTDIR, OUTIMGS, potential_image_file))
         else:
             image = ""
