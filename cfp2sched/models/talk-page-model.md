@@ -1,6 +1,6 @@
 ---
 title: ###TITLE###
-image: ###IMAGE###
+image: ###IMAGEHEADER###
 layout: "post"
 permalink: /talks/###TALKID###
 published: true

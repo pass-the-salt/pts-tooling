@@ -74,15 +74,18 @@ for talk_details in data:
         fn = talk_details['options']['picture-upload']['filename']
         file_name_extension = os.path.splitext(fn)[1].lower()
         potential_image_file = 'hotcrp-paper{}-picture-upload{}'.format(talk_details['pid'], file_name_extension)
-        print('> ' + potential_image_file)
+
         if os.path.exists(os.path.join(INDIR, potential_image_file)):
-            image = '![speaker](/img/speakers/{})'.format(potential_image_file)
-            print('  > ' + image)
+            image = '![speaker]({}{})'.format(OUTIMGS,potential_image_file)
+            imageheader = '{}{}'.format(OUTIMGS,potential_image_file)
             shutil.copyfile(os.path.join(INDIR, potential_image_file), os.path.join(OUTDIR, OUTIMGS, potential_image_file))
         else:
             image = ""
+            imageheader = ""
+
     except KeyError:
         image = ""
+        imageheader = ""
 
     talk_details['abstract'] = talk_details['abstract'].replace('\r','')
     summary = talk_details['abstract'][:97]
@@ -96,6 +99,7 @@ for talk_details in data:
     filedata = filedata.replace('###CONTENT###', talk_details['abstract'])
     filedata = filedata.replace('###SPEAKERS###', "**{}**".format(speakers))
     filedata = filedata.replace('###IMAGE###', image)
+    filedata = filedata.replace('###IMAGEHEADER###', imageheader)    
     filedata = filedata.replace('###BIO###', bio)
 
     # fill the schedule talk line in the talks table
