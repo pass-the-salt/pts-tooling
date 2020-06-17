@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ "$1" == "" ];then
+    echo "Usage: $0 <next_slot_time>"
+    echo "E.g.   $0 15:55"
+    exit 1
+fi
+HM=$1
+StartDate=$(date "+%s")
+EndDate=$(date -d "$(date '+%Y/%m/%d '$HM':00')" "+%s")
+SECS=$(($EndDate-$StartDate))
+if [ "$2" == "stay" ]; then
+    countdown ${SECS}s && python3 -c 'print("\n"*100)' && while :; do sleep 1; done
+else
+    countdown ${SECS}s
+fi
