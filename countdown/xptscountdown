@@ -1,3 +1,4 @@
 #!/bin/bash
 
-xfce4-terminal --geometry=80x23 --hide-menubar --hide-scrollbar --hide-toolbar --hide-borders --command "ptscountdown $*"
+# Try to preserve the 16:9 ratio
+xfce4-terminal --geometry=120x34 --hide-menubar --hide-scrollbar --hide-toolbar --hide-borders --command "ptscountdown $*"
