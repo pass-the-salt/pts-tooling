@@ -8,7 +8,7 @@ Put `countdown`, `ptscountdown` and `xptscountdown` in your path
 
 Setup:
 
-Launch `xfce4-terminal` and configure pts2020background1024.png as background image. Choose white font. Close term.
+Launch `xfce4-terminal` and configure pts2020bgcounter1024.png as background image. Choose white font. Close term.
 
 Usage examples:
 ```
